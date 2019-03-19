@@ -9,4 +9,5 @@ bash <(curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-sc
 ```
 
 **[SplashKit Website](https://www.splashkit.io/)**
+
 **[SplashKit Documentation](https://www.splashkit.io/api/animations/)**
