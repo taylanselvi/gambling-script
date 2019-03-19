@@ -1,4 +1,20 @@
 
+obj/Gambling.csproj.nuget.cache
+obj/Gambling.csproj.nuget.g.props
+obj/Gambling.csproj.nuget.g.targets
+obj/project.assets.json
+obj/Debug/netcoreapp2.0/Gambling.AssemblyInfo.cs
+obj/Debug/netcoreapp2.0/Gambling.AssemblyInfoInputs.cache
+obj/Debug/netcoreapp2.0/Gambling.csproj.FileListAbsolute.txt
+obj/Debug/netcoreapp2.0/Gambling.csprojAssemblyReference.cache
+obj/Debug/netcoreapp2.0/Gambling.csprojResolveAssemblyReference.cache
 obj/Debug/netcoreapp2.0/Gambling.assets.cache
 obj/Debug/netcoreapp2.0/Gambling.csproj.CoreCompileInputs.cache
 obj/Debug/netcoreapp2.0/project.razor.json
+obj/Debug/netcoreapp2.0/Gambling.dll
+obj/Debug/netcoreapp2.0/Gambling.pdb
+bin/Debug/netcoreapp2.0/Gambling.deps.json
+bin/Debug/netcoreapp2.0/Gambling.dll
+bin/Debug/netcoreapp2.0/Gambling.pdb
+bin/Debug/netcoreapp2.0/Gambling.runtimeconfig.dev.json
+bin/Debug/netcoreapp2.0/Gambling.runtimeconfig.json
