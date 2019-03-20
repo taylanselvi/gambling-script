@@ -676,28 +676,30 @@
     ]
   },
   "packageFolders": {
-    "/Users/taylan/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Taylan\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/taylan/Desktop/Dropbox/Uni/Code2019/gambling-script/Gambling.csproj",
-      "projectName": "Gambling",
-      "projectPath": "/Users/taylan/Desktop/Dropbox/Uni/Code2019/gambling-script/Gambling.csproj",
-      "packagesPath": "/Users/taylan/.nuget/packages/",
-      "outputPath": "/Users/taylan/Desktop/Dropbox/Uni/Code2019/gambling-script/obj/",
+      "projectUniqueName": "C:\\Users\\Taylan\\Desktop\\gambling-script\\gambling-script.csproj",
+      "projectName": "gambling-script",
+      "projectPath": "C:\\Users\\Taylan\\Desktop\\gambling-script\\gambling-script.csproj",
+      "packagesPath": "C:\\Users\\Taylan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Taylan\\Desktop\\gambling-script\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/taylan/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Taylan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

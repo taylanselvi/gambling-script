@@ -8,11 +8,11 @@ public class Roulette {
     }
 
     public void RouletteWindow() {
-        Window window = new Window("Roulette", 1920, 1080);
+        Window window = new Window("Roulette", 1280, 720);
             
         while (!window.CloseRequested) {
             SplashKit.ProcessEvents();
-            RouletteDependencies.handleInput(); 
+            Input.run(); 
             RouletteBoard RB = new RouletteBoard(window);
         }
     }

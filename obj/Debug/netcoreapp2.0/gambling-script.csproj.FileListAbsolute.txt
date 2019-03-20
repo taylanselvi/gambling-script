@@ -1,0 +1,11 @@
+C:\Users\Taylan\Desktop\gambling-script\bin\Debug\netcoreapp2.0\gambling-script.deps.json
+C:\Users\Taylan\Desktop\gambling-script\bin\Debug\netcoreapp2.0\gambling-script.runtimeconfig.json
+C:\Users\Taylan\Desktop\gambling-script\bin\Debug\netcoreapp2.0\gambling-script.runtimeconfig.dev.json
+C:\Users\Taylan\Desktop\gambling-script\bin\Debug\netcoreapp2.0\gambling-script.dll
+C:\Users\Taylan\Desktop\gambling-script\bin\Debug\netcoreapp2.0\gambling-script.pdb
+C:\Users\Taylan\Desktop\gambling-script\obj\Debug\netcoreapp2.0\gambling-script.csprojAssemblyReference.cache
+C:\Users\Taylan\Desktop\gambling-script\obj\Debug\netcoreapp2.0\gambling-script.csproj.CoreCompileInputs.cache
+C:\Users\Taylan\Desktop\gambling-script\obj\Debug\netcoreapp2.0\gambling-script.AssemblyInfoInputs.cache
+C:\Users\Taylan\Desktop\gambling-script\obj\Debug\netcoreapp2.0\gambling-script.AssemblyInfo.cs
+C:\Users\Taylan\Desktop\gambling-script\obj\Debug\netcoreapp2.0\gambling-script.dll
+C:\Users\Taylan\Desktop\gambling-script\obj\Debug\netcoreapp2.0\gambling-script.pdb

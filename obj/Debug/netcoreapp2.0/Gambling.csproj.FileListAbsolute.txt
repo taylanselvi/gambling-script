@@ -31,3 +31,5 @@ C:/Users/Taylan/Dropbox/Uni/Code2019/Gambling/obj/Debug/netcoreapp2.0/Gambling.p
 /Users/taylan/Desktop/Dropbox/Uni/Code2019/gambling-script/obj/Debug/netcoreapp2.0/Gambling.AssemblyInfo.cs
 /Users/taylan/Desktop/Dropbox/Uni/Code2019/gambling-script/obj/Debug/netcoreapp2.0/Gambling.dll
 /Users/taylan/Desktop/Dropbox/Uni/Code2019/gambling-script/obj/Debug/netcoreapp2.0/Gambling.pdb
+C:\Users\Taylan\Desktop\gambling-script\obj\Debug\netcoreapp2.0\Gambling.dll
+C:\Users\Taylan\Desktop\gambling-script\obj\Debug\netcoreapp2.0\Gambling.pdb
