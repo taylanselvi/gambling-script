@@ -7,7 +7,7 @@ public class RouletteDependencies {
     public static readonly int[] BlackNumbers = { 2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35 };
     public static readonly int BoardXOffset = 150, BoardYOffset = 150;
 
-    public double betMultiplier(BetType type) {
+    public static double betMultiplier(BetType type) {
         if (type == BetType.STRAIGHT) {
             return 35.0;
         } else if (type == BetType.SPLIT) {

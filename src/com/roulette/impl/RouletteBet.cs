@@ -2,37 +2,29 @@ using System;
 
 public class RouletteBet {
 
-    private int _betAmount;
+    private double _betAmount, _payOut;
     private int[] _surroundingNumbers;
     private BetType _type;
+    private int _roll;
 
-    public RouletteBet(int betAmount, BetType type, int[] surrNum) {
+    public RouletteBet(double betAmount, BetType type, int[] surrNum) {
         _betAmount = betAmount;
         _type = type;
         _surroundingNumbers = surrNum;
 
-        for (int x = 0; x < _surroundingNumbers.Length; x++) {
-            Console.WriteLine(_surroundingNumbers[x]);
-        }
+        RouletteRoll roll = new RouletteRoll();
+        _roll = roll.getRoll();
+
+        Console.WriteLine(_roll);
+
+        handleBet(type);
     }
 
-    private void handleBetType(BetType type) {
-        if (type == BetType.STRAIGHT) {
-            
-        } else if (type == BetType.SPLIT) {
-            
-        } else if (type == BetType.STREET) {
-           
-        } else if (type == BetType.SIX_LINE) {
-            
-        } else if (type == BetType.CORNER) {
-            
-        } else if (type == BetType.TRIO) {
-           
-        } else if (type == BetType.BASKET) {
-            
-        } else if (type == BetType.COLUMN) {
-            
+    private void handleBet(BetType type) {
+        for (int i = 0; i < _surroundingNumbers.Length; i++) {
+            if (_surroundingNumbers[i] == _roll) {
+                _payOut = _betAmount + (_betAmount * RouletteDependencies.betMultiplier(type));
+            }
         }
     }
 

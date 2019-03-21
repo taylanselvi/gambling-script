@@ -8,5 +8,10 @@ public enum BetType {
     CORNER,
     TRIO,
     BASKET,
-    COLUMN
+    COLUMN,
+    PARITY,
+    COLOUR,
+    ROLL_HALF,
+    OTHER
+
 }
