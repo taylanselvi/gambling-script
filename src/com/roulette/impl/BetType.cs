@@ -1,13 +1,13 @@
 using System;
 
 public enum BetType {
-    STRAIGHT,
+    STRAIGHT, // functionality done
     SPLIT,
     STREET,
-    SIX_LINE,
-    CORNER,
-    TRIO,
-    BASKET,
+    SIX_LINE, // functionality done
+    CORNER, // functionality done
+    TRIO, // functionality done
+    BASKET, // functionality done
     COLUMN,
     PARITY,
     COLOUR,
