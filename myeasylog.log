@@ -1,0 +1,14 @@
+2019-03-22 17:52:39,387 WARNING [default] Failed to read text from column 1. Ensure query succeeded, there is a row ready to read, and there are sufficient columns.
+2019-03-22 17:52:39,388 WARNING [default] Failed to read int from column 2. Ensure query succeeded, there is a row ready to read, and there are sufficient columns.
+2019-03-22 17:53:18,412 WARNING [default] Failed to read text from column 1. Ensure query succeeded, there is a row ready to read, and there are sufficient columns.
+2019-03-22 17:53:18,413 WARNING [default] Failed to read int from column 2. Ensure query succeeded, there is a row ready to read, and there are sufficient columns.
+2019-03-22 17:54:36,746 WARNING [default] Failed to read text from column 0. Ensure query succeeded, there is a row ready to read, and there are sufficient columns.
+2019-03-22 17:54:36,747 WARNING [default] Failed to read int from column 1. Ensure query succeeded, there is a row ready to read, and there are sufficient columns.
+2019-03-22 17:54:48,143 WARNING [default] Failed to read text from column 0. Ensure query succeeded, there is a row ready to read, and there are sufficient columns.
+2019-03-22 17:54:48,144 WARNING [default] Failed to read int from column 1. Ensure query succeeded, there is a row ready to read, and there are sufficient columns.
+2019-03-22 17:55:40,475 WARNING [default] Failed to read text from column 0. Ensure query succeeded, there is a row ready to read, and there are sufficient columns.
+2019-03-22 17:55:40,476 WARNING [default] Failed to read int from column 1. Ensure query succeeded, there is a row ready to read, and there are sufficient columns.
+2019-03-22 17:58:02,443 WARNING [default] Failed to read text from column 0. Ensure query succeeded, there is a row ready to read, and there are sufficient columns.
+2019-03-22 17:58:02,444 WARNING [default] Failed to read int from column 1. Ensure query succeeded, there is a row ready to read, and there are sufficient columns.
+2019-03-22 17:59:59,741 WARNING [default] Failed to read text from column 1. Ensure query succeeded, there is a row ready to read, and there are sufficient columns.
+2019-03-22 17:59:59,742 WARNING [default] Failed to read int from column 2. Ensure query succeeded, there is a row ready to read, and there are sufficient columns.

@@ -4,41 +4,40 @@ using System.Linq;
 using System.Text;
 
 public class RouletteRoll {
-    private int _roll, _betAmount, _userID;
-    private string _betType;
-
-    // bet properties
-    private string _parity = "odd", _colour = "black", _column, _rollHalf;
+    private int _roll;
 
 
     public RouletteRoll() {
         Random rnd = new Random();
         _roll = rnd.Next(0, 36);
+
+        PastRolls _past = new PastRolls(_roll);
+        _past.displayList();
     }
 
     public int getRoll() {
         return _roll;
     }
 
-    public string determineColour() {
+    public int determineColour() {
         if (_roll == 0) {
-            return "green";
+            return 0;
         }
         for (int i = 0; i < RouletteDependencies.RedNumbers.Length; i++) {
             if (_roll == RouletteDependencies.RedNumbers[i])
-                return "red";
+                return 1;
         }
-        return "black";
+        return 2;
     }
 
-    public string determineParity() {
+    public int determineParity() {
         if (_roll == 0) {
-            return null;
+            return -1;
         }        
         if (_roll % 2 == 0) {
-            return "even";
+            return 1;
         }
-        return "odd";
+        return 2;
     }
 
     public string determineColumn() {

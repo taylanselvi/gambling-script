@@ -1,28 +1,19 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "a53b24f9e91708b74299e35697a803241e75d021"
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "gambling-script/1.0.0": {
         "dependencies": {
-          "System.Windows.Forms.Ribbon35": "3.5.8",
           "System.Windows.Forms.DataVisualization.Design": "4.0.0.0",
           "System.Windows.Forms.DataVisualization": "4.0.0.0",
           "System.Windows.Forms": "4.0.0.0"
         },
         "runtime": {
           "gambling-script.dll": {}
-        }
-      },
-      "System.Windows.Forms.Ribbon35/3.5.8": {
-        "runtime": {
-          "lib/net35/System.Windows.Forms.Ribbon35.dll": {
-            "assemblyVersion": "3.5.8.0",
-            "fileVersion": "3.5.8.0"
-          }
         }
       },
       "System.Windows.Forms.DataVisualization.Design/4.0.0.0": {
@@ -136,13 +127,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "System.Windows.Forms.Ribbon35/3.5.8": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-eCT9IcJyU/NDrDA7Obp40Ata7hvPTVrtKjcofJe4LC/qjx7MNpOR0vNDfc5IDEzZi5bP5wGfJpVOWnnFeL2AUQ==",
-      "path": "system.windows.forms.ribbon35/3.5.8",
-      "hashPath": "system.windows.forms.ribbon35.3.5.8.nupkg.sha512"
     },
     "System.Windows.Forms.DataVisualization.Design/4.0.0.0": {
       "type": "reference",
