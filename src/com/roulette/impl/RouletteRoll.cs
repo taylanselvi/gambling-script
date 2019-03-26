@@ -20,12 +20,10 @@ public class RouletteRoll {
     }
 
     public int determineColour() {
-        if (_roll == 0) {
-            return 0;
-        }
         for (int i = 0; i < RouletteDependencies.RedNumbers.Length; i++) {
-            if (_roll == RouletteDependencies.RedNumbers[i])
+            if (_roll == RouletteDependencies.RedNumbers[i]) {
                 return 1;
+            }
         }
         return 2;
     }
