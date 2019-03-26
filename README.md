@@ -1,5 +1,5 @@
 # gambling-script
-Applying the .NET library using C# to create a gambling game with blackjack, roulette and coinflip.
+Applying the .NET library using C# to create a gambling game with roulette.
 
 This game uses SplashKit as a dependency.
 
