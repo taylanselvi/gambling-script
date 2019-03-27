@@ -8,7 +8,7 @@ public class RouletteDependencies {
     public static readonly int BoardXOffset = 37, BoardYOffset = 127;
     public static List<int> PastRolls = new List<int>();
 
-    public static double betMultiplier(BetType type) {
+    public static double BetMultiplier(BetType type) {
         if (type == BetType.STRAIGHT) {
             return 35.0;
         } else if (type == BetType.SPLIT) {

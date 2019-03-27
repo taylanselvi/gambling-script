@@ -13,13 +13,19 @@ public class Roulette {
     public void RouletteWindow() {
         Window window = new Window("Roulette", 771, 549);
         PastRolls pr = new PastRolls(window);
-        RouletteBoard board = new RouletteBoard(window, _user);
-        pr.displayList();
+        PastRolls._window = window;
+        RouletteBoard board = new RouletteBoard(window, _user, pr);
+        PastRolls.DisplayList();
         
         while (!window.CloseRequested) {
             SplashKit.ProcessEvents();
-            Input.run(); 
-            board.updateBalance(_user);
+            Input.Run(); 
+            if (!PastRolls.rolling) {
+                board.UpdateBalance(_user);
+            }
+            if (PastRolls.isRolled) {
+                PastRolls.DisplayList();
+            }
             SplashKit.RefreshWindow(window, 60);
         }
     }

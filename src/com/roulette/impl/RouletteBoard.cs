@@ -7,16 +7,17 @@ public class RouletteBoard {
     private Window _window;
     private Load _user;
 
-    public RouletteBoard(Window window, Load user) {
+    public RouletteBoard(Window window, Load user, PastRolls rolls) {
         _window = window;
         _user = user;
         window.Clear(SplashKit.RGBColor(0, 129, 62));
-        SplashKit.DrawBitmap(_mainBoard, xOffset(), yOffset());
-        updateBalance(user);
+        SplashKit.DrawBitmap(_mainBoard, XOffset(), YOffset());
+        if (PastRolls.rolling)
+            UpdateBalance(user);
         window.Refresh();
     }
 
-    public void updateBalance(Load user) {
+    public void UpdateBalance(Load user) {
         int textWidth, balanceWidth;
 
         Bitmap BetBG = new Bitmap("BetAmountBG", "BetAmountBG.jpg");
@@ -31,11 +32,11 @@ public class RouletteBoard {
         _window.Refresh();
     }
 
-    private int xOffset() {
+    private int XOffset() {
         return RouletteDependencies.BoardXOffset;
     }
 
-    private int yOffset() {
+    private int YOffset() {
         return RouletteDependencies.BoardYOffset;
     }
 

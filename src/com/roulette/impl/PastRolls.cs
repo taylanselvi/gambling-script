@@ -4,32 +4,37 @@ using SplashKitSDK;
 public class PastRolls {
 
     private int _roll;
-    private Window _window;
+    public static Window _window;
+    public static bool rolling = false;
+    public static bool isRolled = false;
 
     public PastRolls(int roll) {
         _roll = roll;
-        addToList(_roll);
+        AddToList(_roll);
     }
 
     public PastRolls(Window window) {
         _window = window;
     }
 
-    public void addToList(int roll) {
+    public void AddToList(int roll) {
         if (RouletteDependencies.PastRolls.Count == 10) {
             RouletteDependencies.PastRolls.RemoveAt(0);
         }
         RouletteDependencies.PastRolls.Add(roll);
     }
 
-    public void displayList() {
+    public void TestRun() {
+        Bitmap one;
 
-        Bitmap one, two, three, four, five, six, seven, eight, nine, ten, BG;
+        
+    }
+
+    public static void DisplayList() {
+
+        Bitmap one, two, three, four, five, six, seven, eight, nine, ten, BG, one_behind;
         BG = new Bitmap("PastRollsBG", "PastRollsBG.png");
         SplashKit.DrawBitmap("PastRollsBG", RouletteDependencies.BoardXOffset, RouletteDependencies.BoardYOffset - 70);
-
-        one = new Bitmap(RouletteDependencies.PastRolls[9].ToString(), $"{RouletteDependencies.PastRolls[9]}.png");
-        SplashKit.DrawBitmap(RouletteDependencies.PastRolls[9].ToString(), RouletteDependencies.BoardXOffset + 105, RouletteDependencies.BoardYOffset - 60);
 
         two = new Bitmap(RouletteDependencies.PastRolls[8].ToString(), $"{RouletteDependencies.PastRolls[8]}.png");
         SplashKit.DrawBitmap(RouletteDependencies.PastRolls[8].ToString(), RouletteDependencies.BoardXOffset + 154, RouletteDependencies.BoardYOffset - 60);
@@ -59,6 +64,29 @@ public class PastRolls {
         SplashKit.DrawBitmap(RouletteDependencies.PastRolls[0].ToString(), RouletteDependencies.BoardXOffset + 546, RouletteDependencies.BoardYOffset - 60);
 
         SplashKit.DrawText("Past Rolls:", Color.White, "BN.ttf", 35, RouletteDependencies.BoardXOffset + 282, RouletteDependencies.BoardYOffset - 111);
+
+        if (isRolled) {
+            SplashKit.PlaySoundEffect(new SoundEffect("RouletteRoll", "RouletteRoll.mp3"));
+            for (int x = 0; x < 20; x++) {
+                Random rnd = new Random();
+                int num = rnd.Next(0, 36);
+                one_behind = new Bitmap("BehindRoller", "BehindRoller.png");
+                SplashKit.DrawBitmap("BehindRoller", 137, 62);
+                one = new Bitmap(num.ToString(), $"{num}.png");
+                SplashKit.DrawBitmap(num.ToString(), RouletteDependencies.BoardXOffset + 105, RouletteDependencies.BoardYOffset - 60);
+                _window.Refresh();
+                SplashKit.Delay(100 + (20 * Convert.ToUInt32(x)));
+                Console.WriteLine(100 + (20 * Convert.ToUInt32(x)));
+            }
+        }
+        
+        one_behind = new Bitmap("BehindRoller", "BehindRoller.png");
+        SplashKit.DrawBitmap("BehindRoller", 137, 62);
+
+        one = new Bitmap(RouletteDependencies.PastRolls[9].ToString(), $"{RouletteDependencies.PastRolls[9]}.png");
+        SplashKit.DrawBitmap(RouletteDependencies.PastRolls[9].ToString(), RouletteDependencies.BoardXOffset + 105, RouletteDependencies.BoardYOffset - 60);
+
+        isRolled = false;
 
 
     }

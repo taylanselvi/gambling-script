@@ -5,21 +5,28 @@ using System.Text;
 
 public class RouletteRoll {
     private int _roll;
+    private PastRolls _past;
 
 
     public RouletteRoll() {
         Random rnd = new Random();
         _roll = rnd.Next(0, 36);
 
-        PastRolls _past = new PastRolls(_roll);
-        _past.displayList();
+        _past = new PastRolls(_roll);
+        PastRolls.rolling = true;
+        PastRolls.isRolled = true;
+        PastRolls.DisplayList();
     }
 
-    public int getRoll() {
+    public void ChangeRolling(bool rolling) {
+        PastRolls.rolling = rolling;
+    }
+
+    public int GetRoll() {
         return _roll;
     }
 
-    public int determineColour() {
+    public int DetermineColour() {
         for (int i = 0; i < RouletteDependencies.RedNumbers.Length; i++) {
             if (_roll == RouletteDependencies.RedNumbers[i]) {
                 return 1;
@@ -28,7 +35,7 @@ public class RouletteRoll {
         return 2;
     }
 
-    public int determineParity() {
+    public int DetermineParity() {
         if (_roll == 0) {
             return -1;
         }        
@@ -38,7 +45,7 @@ public class RouletteRoll {
         return 2;
     }
 
-    public string determineColumn() {
+    public string DetermineColumn() {
         if (_roll >= 1 && _roll <= 12) {
            return "1-12";
         } else if (_roll >= 13 && _roll <= 24) {
@@ -49,7 +56,7 @@ public class RouletteRoll {
         return null;
     }
 
-    public string determineHalf() {
+    public string DetermineHalf() {
         if (_roll >= 1 && _roll <= 18) {
             return "1-18";
         } else if (_roll >= 19 && _roll <= 36) {

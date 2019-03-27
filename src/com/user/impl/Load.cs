@@ -13,16 +13,17 @@ public class Load {
         _userId = id;
         _name = name;
         SplashKit.OpenDatabase("user", "user_database");
-        initialiseUser();
+        InitialiseUser();
 
         PastRolls pr = new PastRolls(0);
         for (int x = 0; x < 10; x++) {
             Random rnd = new Random();
-            pr.addToList(rnd.Next(0, 36));
+            pr.AddToList(rnd.Next(0, 36));
         }
+        _balance = 1000.0;
     }
 
-    public void initialiseUser() {
+    public void InitialiseUser() {
         result = SplashKit.RunSql("user", $"SELECT * FROM users WHERE id = {_userId};");
         if (!SplashKit.HasRow(result)) {
             SplashKit.RunSql("user", $"INSERT INTO users (id, name, balance) VALUES ({_userId}, '{_name}', 0);");
@@ -36,7 +37,7 @@ public class Load {
         SplashKit.FreeAllQueryResults();
     }
 
-    public static void adjustBetAmount(bool increase, double amount) {
+    public static void AdjustBetAmount(bool increase, double amount) {
         if (BetAmount + amount > 5000 && increase) {
             Console.WriteLine("Bet cannot be greater than $5000.");
             return;
@@ -54,7 +55,7 @@ public class Load {
 
     
 
-    public void balanceAdjust(bool add, double amount) {
+    public void BalanceAdjust(bool add, double amount) {
         if (add) {
             _balance += amount;
         } else {

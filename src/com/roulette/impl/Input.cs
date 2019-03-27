@@ -11,50 +11,50 @@ public class Input {
         return RouletteDependencies.BoardYOffset;
     }
 
-        public static void run() {
+        public static void Run() {
         if (SplashKit.MouseClicked(MouseButton.LeftButton)) {
 
             /* START BET AMOUNT ADJUSTMENTS */
 
             if (SplashKit.MouseX() >= (BoardXOffset() + 63) && SplashKit.MouseX() <= (BoardXOffset() + 158) && SplashKit.MouseY() >= (BoardYOffset() + 282) && SplashKit.MouseY() <= (BoardYOffset() + 306)) {
                 // -2.50
-                Load.adjustBetAmount(false, 2.50);
+                Load.AdjustBetAmount(false, 2.50);
                 Console.WriteLine(Load.BetAmount);
             }
             if (SplashKit.MouseX() >= (BoardXOffset() + 161) && SplashKit.MouseX() <= (BoardXOffset() + 255) && SplashKit.MouseY() >= (BoardYOffset() + 282) && SplashKit.MouseY() <= (BoardYOffset() + 306)) {
                 // -10.00
-                Load.adjustBetAmount(false, 10.00);
+                Load.AdjustBetAmount(false, 10.00);
                 Console.WriteLine(Load.BetAmount);
             }
             if (SplashKit.MouseX() >= (BoardXOffset() + 63) && SplashKit.MouseX() <= (BoardXOffset() + 158) && SplashKit.MouseY() >= (BoardYOffset() + 309) && SplashKit.MouseY() <= (BoardYOffset() + 333)) {
                 // -25.00
-                Load.adjustBetAmount(false, 25.00);
+                Load.AdjustBetAmount(false, 25.00);
                 Console.WriteLine(Load.BetAmount);
             }
             if (SplashKit.MouseX() >= (BoardXOffset() + 161) && SplashKit.MouseX() <= (BoardXOffset() + 255) && SplashKit.MouseY() >= (BoardYOffset() + 309) && SplashKit.MouseY() <= (BoardYOffset() + 333)) {
                 // -100.00
-                Load.adjustBetAmount(false, 100.00);
+                Load.AdjustBetAmount(false, 100.00);
                 Console.WriteLine(Load.BetAmount);
             }
 
             if (SplashKit.MouseX() >= (BoardXOffset() + 454) && SplashKit.MouseX() <= (BoardXOffset() + 548) && SplashKit.MouseY() >= (BoardYOffset() + 282) && SplashKit.MouseY() <= (BoardYOffset() + 306)) {
                 // +2.50
-                Load.adjustBetAmount(true, 2.50);
+                Load.AdjustBetAmount(true, 2.50);
                 Console.WriteLine(Load.BetAmount);
             }
             if (SplashKit.MouseX() >= (BoardXOffset() + 552) && SplashKit.MouseX() <= (BoardXOffset() + 646) && SplashKit.MouseY() >= (BoardYOffset() + 282) && SplashKit.MouseY() <= (BoardYOffset() + 306)) {
                 // +10.00
-                Load.adjustBetAmount(true, 10);
+                Load.AdjustBetAmount(true, 10);
                 Console.WriteLine(Load.BetAmount);
             }
             if (SplashKit.MouseX() >= (BoardXOffset() + 454) && SplashKit.MouseX() <= (BoardXOffset() + 548) && SplashKit.MouseY() >= (BoardYOffset() + 309) && SplashKit.MouseY() <= (BoardYOffset() + 333)) {
                 // +25.00
-                Load.adjustBetAmount(true, 25);
+                Load.AdjustBetAmount(true, 25);
                 Console.WriteLine(Load.BetAmount);
             }
             if (SplashKit.MouseX() >= (BoardXOffset() + 552) && SplashKit.MouseX() <= (BoardXOffset() + 646) && SplashKit.MouseY() >= (BoardYOffset() + 309) && SplashKit.MouseY() <= (BoardYOffset() + 333)) {
                 // +100.00
-                Load.adjustBetAmount(true, 100);
+                Load.AdjustBetAmount(true, 100);
                 Console.WriteLine(Load.BetAmount);
             }
 

@@ -15,15 +15,19 @@ public class RouletteBet {
         _type = type;
         _surroundingNumbers = surrNum;
 
+
+
         if (_user.balance() < _betAmount) {
             Console.WriteLine($"You don't have enough funds to do the ${_betAmount} bet. - {_type.ToString()}");
             return;
         }
 
-        _rouletteRoll = new RouletteRoll();
-        _roll = _rouletteRoll.getRoll();
+        SplashKit.PlaySoundEffect(new SoundEffect("PlaceBet", "PlaceBet.mp3"));
 
-        _user.balanceAdjust(false, _betAmount);
+        _rouletteRoll = new RouletteRoll();
+        _roll = _rouletteRoll.GetRoll();
+
+        _user.BalanceAdjust(false, _betAmount);
         Console.Write($"You have placed a ${betAmount} on {type.ToString().ToLower()}, you need ");
         for (int x = 0; x < surrNum.Length; x++) {
             if (surrNum.Length > 1 && surrNum.Length != (x + 1)) {
@@ -37,35 +41,42 @@ public class RouletteBet {
 
         Console.WriteLine($"The roll is... {_roll}.");
 
-        handleBet(type);
+        HandleBet(type);
     }
 
-    private void handleBet(BetType type) {
+    private void HandleBet(BetType type) {
         if(type == BetType.PARITY) {
-            if (_rouletteRoll.determineParity() == _surroundingNumbers[0]) {
-                _payOut = (_betAmount * RouletteDependencies.betMultiplier(type));
+            if (_rouletteRoll.DetermineParity() == _surroundingNumbers[0]) {
+                _payOut = (_betAmount * RouletteDependencies.BetMultiplier(type));
                 Console.WriteLine($"Congratulations, you have won ${_payOut} on your ${_betAmount} bet!");
-                _user.balanceAdjust(true, _payOut + _betAmount);
+                _user.BalanceAdjust(true, _payOut + _betAmount);
+                _rouletteRoll.ChangeRolling(false);
+                SplashKit.PlaySoundEffect(new SoundEffect("RouletteWin", "RouletteWin.mp3"));
                 return;
             }
         } else if(type == BetType.COLOUR) {
-            if (_rouletteRoll.determineColour() == _surroundingNumbers[0]) {
-                _payOut = (_betAmount * RouletteDependencies.betMultiplier(type));
+            if (_rouletteRoll.DetermineColour() == _surroundingNumbers[0]) {
+                _payOut = (_betAmount * RouletteDependencies.BetMultiplier(type));
                 Console.WriteLine($"Congratulations, you have won ${_payOut} on your ${_betAmount} bet!");
-                _user.balanceAdjust(true, _payOut + _betAmount);
+                _user.BalanceAdjust(true, _payOut + _betAmount);
+                _rouletteRoll.ChangeRolling(false);
+                SplashKit.PlaySoundEffect(new SoundEffect("RouletteWin", "RouletteWin.mp3"));
                 return;
             }
         } else {
             for (int i = 0; i < _surroundingNumbers.Length; i++) {
                 if (_surroundingNumbers[i] == _roll) {
-                    _payOut = (_betAmount * RouletteDependencies.betMultiplier(type));
+                    _payOut = (_betAmount * RouletteDependencies.BetMultiplier(type));
                     Console.WriteLine($"Congratulations, you have won ${_payOut} on your ${_betAmount} bet!");
-                    _user.balanceAdjust(true, _payOut + _betAmount);
+                    _user.BalanceAdjust(true, _payOut + _betAmount);
+                    _rouletteRoll.ChangeRolling(false);
+                    SplashKit.PlaySoundEffect(new SoundEffect("RouletteWin", "RouletteWin.mp3"));
                     return;
                 }
             }
         }
         Console.WriteLine($"Sorry, you have lost ${_betAmount}.");
+        _rouletteRoll.ChangeRolling(false);
     }
 
 }
